@@ -1,0 +1,23 @@
+{
+  "name": "map-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taojoue/map-scrapper.git"
+  },
+  "author": "Tao Jouet - Nicolas Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taojoue/map-scrapper/issues"
+  },
+  "homepage": "https://github.com/taojoue/map-scrapper#readme",
+  "dependencies": {
+    "image-scraper": "^0.2.1",
+    "sharp": "^0.30.4"
+  }
+}
