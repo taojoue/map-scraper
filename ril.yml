@@ -1,0 +1,26 @@
+version: '3'
+services:
+  wp_database:
+    image: mysql:5.7
+    volumes:
+      - wordpres_cesi_database:/var/lib/mysql:rw
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mdproot
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: 1MdP!
+    ports:
+      - "3306:3306"
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "1234:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: wp_database:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: 1MdP!
+      WORDPRESS_DB_NAME: wordpress
+volumes:
+  wordpres_cesi_database:{}
